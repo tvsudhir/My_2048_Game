@@ -1,0 +1,34 @@
+<html>
+<head>
+	<link rel="stylesheet" href="./css/gameView.css" />
+	<script src="./gameViewModel.js"></script>
+	<script src="./lib/jquery-1.11.1.js"></script>
+	<script>
+		var viewModel;
+		window.onload = function () {
+			viewModel = createViewModel(document, $);
+			viewModel.init({ matrixSize: 4, possibleNumbers: [2,4] });
+		}
+	</script>
+</head>
+
+<body>
+
+<!--
+	<div>
+		Tiles: <input id="matrixSizeInput" value="" />
+	</div>
+
+	<div>
+		Possible Numbers: <input id="possibleNumbersInput" value="" />
+	</div>
+
+	<div>
+		<input type="button" value="Reinitialize" onclick="viewModel.reinitializeMatrix()" />
+	</div>
+-->
+	<div id="gameContainer" class="gameContainer"></div>
+
+</body>
+
+</html>
