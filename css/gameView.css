@@ -1,0 +1,21 @@
+.gameContainer {
+	border-style: solid;
+	border-color: red;
+}
+
+.tile {
+	height: 50px;
+	width: 50px;
+	border-style: solid;
+	border-color: green;
+	float: left;
+}
+
+.tile.move {
+	border-color: blue;
+}
+
+.tile .content {
+	font-weight: 900;
+	padding: 16px;
+}
