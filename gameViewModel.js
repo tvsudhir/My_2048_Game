@@ -203,9 +203,9 @@ createViewModel = function (d, $) {
 			while (nextNode) {
 				if (currentNode.value && currentNode.value === nextNode.value) {
 					currentNode.setValue(currentNode.value + nextNode.value);
+					this.sumUpUIChange(currentNode);
 					nextNode.setValue();
-					this.moveCloser(currentNode, moveDirection);
-
+					this.moveCloser(currentNode, moveDirection);			
 					nextNode = nextNode[moveDirection];
 					isSummed = true
 					continue;
@@ -221,6 +221,14 @@ createViewModel = function (d, $) {
 			}
 
 			return isSummed;
+		},
+
+		sumUpUIChange: function (node) {
+			node.style.transform = "scale(1.2, 1.2)";
+
+			setTimeout(function () {
+				node.style.transform = "";
+			}, 100);
 		},
 
 		commonArrowClick: function (info) {
