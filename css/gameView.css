@@ -1,13 +1,17 @@
 .gameContainer {
 	border-style: solid;
-	border-color: red;
+	border-color: C7A899;
 }
 
 .tile {
 	height: 50px;
 	width: 50px;
+
+	background-color: EEE4DA;
+
 	border-style: solid;
-	border-color: green;
+	border-color: C7A899;
+
 	float: left;
 }
 
@@ -15,7 +19,12 @@
 	border-color: blue;
 }
 
+.tile.summed {
+	transform: scale(2,2);
+}
+
 .tile .content {
 	font-weight: 900;
 	padding: 16px;
+	font-family: sans-serif;
 }
